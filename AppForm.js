@@ -53,8 +53,11 @@ export default function AppForm({ route, navigation }) {
                 clearButtonMode="always"
                 value={quantidade.toString()} /> 
             <TouchableOpacity style={styles.button} onPress={handleButtonPress}> 
-            <Text style={styles.buttonText}>Salvar</Text> 
-            </TouchableOpacity> 
+                <View style={styles.buttonContainer}>
+                    <Icon name="save" size={22} color="white" />
+                    <Text style={styles.buttonText}>Salvar</Text> 
+                </View>
+            </TouchableOpacity>
         </View>
         <StatusBar style="light" />
       </View>
@@ -107,8 +110,13 @@ const styles = StyleSheet.create({
       shadowOpacity: 20,
       shadowColor: '#ccc',
     },
+    buttonContainer: {
+        flexDirection: "row"
+    },
     buttonText: {
-      color: '#fff',
-      fontWeight: 'bold',
+    marginLeft: 10,
+    fontSize: 18,
+    color: '#fff',
+    fontWeight: 'bold',
     }
   });
